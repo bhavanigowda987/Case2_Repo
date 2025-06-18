@@ -1,6 +1,6 @@
 region           = "ap-south-1"
 vpc_id           = "vpc-0bdc4f51663f1d50f"
-public_subnets   = ["subnet-02e0c9d244330ba88", "subnet-0839051686b00cff7"]
+public_subnets   = ["subnet-02e0c9d244330ba88", "subnet-0a428d57bd436a249"]
 ami_id           = "ami-0f918f7e67a3323f0"
 instance_type    = "t2.medium"
 key_name         = "jenkinstask"
