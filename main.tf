@@ -85,7 +85,7 @@ resource "aws_lb_listener" "https" {
 # EC2 Instances - Blue
 # -------------------------------
 resource "aws_instance" "blue" {
-  count                     = 2
+  count                     = 1
   ami                       = var.ami_id
   instance_type             = var.instance_type
   subnet_id                 = element(var.public_subnets, count.index)
@@ -101,9 +101,9 @@ resource "aws_instance" "blue" {
               apt update -y
               apt install -y apache2 wget unzip
               cd /var/www/html
-              wget https://www.tooplate.com/zip-templates/2137_barista_cafe.zip
-              unzip 2137_barista_cafe.zip
-              cp -r 2137_barista_cafe/* .
+              wget https://templatemo.com/tm-zip-files-2020/templatemo_522_venue.zip
+              unzip templatemo_522_venue.zip
+              cp -r templatemo_522_venue/* .
               systemctl start apache2
               systemctl enable apache2
               EOF
@@ -136,9 +136,9 @@ resource "aws_instance" "green" {
               apt update -y
               apt install -y apache2 wget unzip
               cd /var/www/html
-              wget https://www.tooplate.com/zip-templates/2129_crispy_kitchen.zip
-              unzip 2129_crispy_kitchen.zip
-              cp -r 2129_crispy_kitchen/* .
+              wget https://www.tooplate.com/zip-templates/2113_earth.zip
+              unzip 2113_earth.zip
+              cp -r 2113_earth/* .
               systemctl start apache2
               systemctl enable apache2
               EOF
